@@ -19,12 +19,14 @@ This code snippet executes the following tasks:
 
 ```json
 {
-    "id": "00000000-0000-0000-0000-000000000000",
-    "UserPrincipalName": "johndoe@domain",
+    "UserIdentity": "00000000-0000-0000-0000-000000000000",
+    "UserDisplayName": "johndoe@domain",
+    "AccountEnabled": true
 }
 ```
 
 > :exclamation: It is important to note that the names of your form fields might differ. Ensure that the `$formObject` hashtable is appropriately adjusted to match your form fields.
+> The field **UserIdentity** accepts different values [See the Microsoft Docs page](https://learn.microsoft.com/en-us/graph/api/user-update?view=graph-rest-1.0&tabs=http)
 
 2. Receive a bearer token by making a POST request to: `https://login.microsoftonline.com/$AADTenantID/oauth2/token`, where `$AADTenantID` is the ID of your Azure Active Directory tenant.
 
